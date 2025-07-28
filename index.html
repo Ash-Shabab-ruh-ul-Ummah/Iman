@@ -1,8 +1,1720 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ash Shabab Ruh Ul Ummah - Standing with Palestine</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
 <body>
-  <head>
-    <h1>Welcome to the incredible Platform</h1>
-  </head>
+  <style>
+    /* Global Styles */
+:root {
+    --primary-color: #1e3a8a;
+    --secondary-color: #f59e0b;
+    --accent-color: #dc2626;
+    --text-color: #333;
+    --light-text: #f8fafc;
+    --bg-color: #ffffff;
+    --light-bg: #f1f5f9;
+    --dark-bg: #1e293b;
+    --border-radius: 8px;
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.section-title h2 span {
+    color: var(--secondary-color);
+}
+
+.title-border {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--primary-color);
+    color: var(--light-text);
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover {
+    background: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn i {
+    margin-left: 8px;
+}
+
+/* Loader */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.spinner {
+    width: 70px;
+    height: 70px;
+    position: relative;
+}
+
+.double-bounce1, .double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+    animation-delay: -1.0s;
+}
+
+@keyframes sk-bounce {
+    0%, 100% { 
+        transform: scale(0.0);
+    } 50% { 
+        transform: scale(1.0);
+    }
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+.header.scrolled {
+    padding: 15px 0;
+    background-color: rgba(30, 58, 138, 0.95);
+}
+
+.header.scrolled .logo h1,
+.header.scrolled .navbar ul li a {
+    color: var(--light-text);
+}
+
+.header.scrolled .mobile-menu-btn i {
+    color: var(--light-text);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.logo h1 span {
+    color: var(--secondary-color);
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 30px;
+}
+
+.navbar ul li a {
+    font-weight: 500;
+    position: relative;
+    padding: 5px 0;
+}
+
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--secondary-color);
+    transition: var(--transition);
+}
+
+.navbar ul li a:hover::after,
+.navbar ul li a.active::after {
+    width: 100%;
+}
+
+.mobile-menu-btn {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    position: relative;
+    margin-top: 80px;
+}
+
+.hero-swiper {
+    height: 100%;
+}
+
+.swiper-slide {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    padding: 0 20px;
+}
+
+.slide-1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/hero1.jpg');
+}
+
+.slide-2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/hero2.jpg');
+}
+
+.slide-3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/hero3.jpg');
+}
+
+.hero-content {
+    max-width: 800px;
+    color: var(--light-text);
+    z-index: 2;
+}
+
+.hero-content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: var(--light-text);
+    opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--secondary-color);
+    opacity: 1;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--light-text);
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: var(--secondary-color);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 1.5rem;
+}
+
+/* Crisis Counter */
+.crisis-counter {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.counter-box {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.counter-item {
+    padding: 20px;
+    flex: 1 1 200px;
+    margin: 10px;
+}
+
+.counter-item i {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.counter-item h3 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.counter-item p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* About Section */
+.about {
+    padding: 100px 0;
+    background-color: var(--light-bg);
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+}
+
+.about-image {
+    flex: 1;
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: var(--transition);
+}
+
+.about-image:hover img {
+    transform: scale(1.05);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.image-overlay i {
+    color: var(--light-text);
+    font-size: 3rem;
+}
+
+.about-image:hover .image-overlay {
+    opacity: 1;
+}
+
+/* Palestine Crisis Section */
+.palestine-crisis {
+    padding: 100px 0;
+    background-color: var(--bg-color);
+}
+
+.crisis-timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.crisis-timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: var(--primary-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+    border-radius: 2px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    top: 15px;
+    z-index: 1;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-item:nth-child(odd)::after {
+    right: -10px;
+}
+
+.timeline-item:nth-child(even)::after {
+    left: -10px;
+}
+
+.timeline-content {
+    padding: 20px;
+    background-color: var(--light-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    position: relative;
+}
+
+.timeline-date {
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.timeline-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* Donation Section */
+.donate {
+    padding: 100px 0;
+    background-color: var(--light-bg);
+}
+
+.donation-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.donation-card {
+    flex: 1 1 250px;
+    background-color: var(--bg-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 30px 20px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.donation-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+    width: 80px;
+    height: 80px;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    font-size: 2rem;
+}
+
+.donation-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.donation-card p {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.amount {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+/* News Section */
+.news {
+    padding: 100px 0;
+    background-color: var(--bg-color);
+}
+
+.news-carousel {
+    margin-top: 40px;
+}
+
+.news-card {
+    background-color: var(--light-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    margin-bottom: 30px;
+}
+
+.news-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.news-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.news-card:hover .news-image img {
+    transform: scale(1.1);
+}
+
+.news-date {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: var(--secondary-color);
+    color: var(--light-text);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.news-content {
+    padding: 20px;
+}
+
+.news-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.news-content p {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.read-more {
+    color: var(--secondary-color);
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+}
+
+.read-more i {
+    margin-left: 5px;
+    transition: var(--transition);
+}
+
+.read-more:hover i {
+    transform: translateX(5px);
+}
+
+/* Emergency Alert */
+.emergency-alert {
+    padding: 30px 0;
+    background-color: var(--accent-color);
+    color: var(--light-text);
+}
+
+.alert-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.alert-icon {
+    font-size: 2.5rem;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.alert-content {
+    flex: 1;
+}
+
+.alert-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.btn-emergency {
+    background-color: var(--light-text);
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.btn-emergency:hover {
+    background-color: var(--secondary-color);
+    color: var(--light-text);
+}
+
+/* Contact Section */
+.contact {
+    padding: 100px 0;
+    background-color: var(--light-bg);
+}
+
+.contact-content {
+    display: flex;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.contact-info {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.info-item {
+    background-color: var(--bg-color);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.info-item:hover {
+    transform: translateY(-10px);
+}
+
+.info-item i {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.info-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-5px);
+}
+
+.contact-form {
+    flex: 1;
+    background-color: var(--bg-color);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-family: inherit;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    padding: 80px 0 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.footer-about {
+    flex: 2;
+}
+
+.footer-about .logo {
+    margin-bottom: 20px;
+}
+
+.footer-about .logo img {
+    height: 40px;
+}
+
+.footer-about .logo h1 {
+    color: var(--light-text);
+}
+
+.footer-about .logo h1 span {
+    color: var(--secondary-color);
+}
+
+.footer-about p {
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social a {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--light-text);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.footer-social a:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-5px);
+}
+
+.footer-links {
+    flex: 1;
+}
+
+.footer-links h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: var(--light-text);
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    opacity: 0.8;
+    transition: var(--transition);
+}
+
+.footer-links ul li a:hover {
+    opacity: 1;
+    color: var(--secondary-color);
+    padding-left: 5px;
+}
+
+.footer-newsletter {
+    flex: 2;
+}
+
+.footer-newsletter h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: var(--light-text);
+}
+
+.footer-newsletter p {
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+.footer-newsletter input {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: var(--border-radius);
+    margin-bottom: 10px;
+    font-family: inherit;
+}
+
+.footer-bottom {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+.footer-menu {
+    margin-top: 10px;
+}
+
+.footer-menu ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-menu ul li a {
+    opacity: 0.8;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.footer-menu ul li a:hover {
+    opacity: 1;
+    color: var(--secondary-color);
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+}
+
+.back-to-top.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-5px);
+}
+
+/* Animations */
+.animate-text {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-text.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animate-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-left.animated {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.animate-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-right.animated {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.delay-1 {
+    transition-delay: 0.2s;
+}
+
+.delay-2 {
+    transition-delay: 0.4s;
+}
+
+.delay-3 {
+    transition-delay: 0.6s;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .about-content,
+    .contact-content {
+        flex-direction: column;
+    }
+    
+    .contact-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 0;
+    }
+    
+    .timeline-item::after {
+        left: 20px;
+    }
+    
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+    
+    .crisis-timeline::after {
+        left: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: var(--primary-color);
+        transition: var(--transition);
+        z-index: 999;
+    }
+    
+    .navbar.active {
+        left: 0;
+    }
+    
+    .navbar ul {
+        flex-direction: column;
+        padding: 30px;
+    }
+    
+    .navbar ul li {
+        margin: 15px 0;
+    }
+    
+    .navbar ul li a {
+        color: var(--light-text);
+        font-size: 1.2rem;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .section-title h2 {
+        font-size: 2rem;
+    }
+    
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+    
+    .counter-box {
+        flex-direction: column;
+    }
+    
+    .donation-cards {
+        flex-direction: column;
+    }
+    
+    .alert-box {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .alert-button {
+        width: 100%;
+    }
+    
+    .btn-emergency {
+        width: 100%;
+    }
+}
+  </style>
+    <!-- Loading Animation -->
+    <div class="loader">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Ash Shabab Ruh Ul Ummah">
+                <h1>Ash Shabab <span>Ruh Ul Ummah</span></h1>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#palestine">Palestine Crisis</a></li>
+                    <li><a href="#donate">Donate</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Carousel -->
+    <section class="hero" id="home">
+        <div class="swiper hero-swiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide slide-1">
+                    <div class="container">
+                        <div class="hero-content">
+                            <h2 class="animate-text">Palestine Needs Your Help</h2>
+                            <p class="animate-text">Over 2 million Palestinians are facing starvation and displacement</p>
+                            <a href="#donate" class="btn animate-text">Donate Now <i class="fas fa-hands-helping"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide slide-2">
+                    <div class="container">
+                        <div class="hero-content">
+                            <h2 class="animate-text">Emergency Food Relief</h2>
+                            <p class="animate-text">Help us provide food packages to starving families in Gaza</p>
+                            <a href="#donate" class="btn animate-text">Feed a Family <i class="fas fa-utensils"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide slide-3">
+                    <div class="container">
+                        <div class="hero-content">
+                            <h2 class="animate-text">Medical Aid for Wounded</h2>
+                            <p class="animate-text">Support our medical missions to treat injured Palestinians</p>
+                            <a href="#donate" class="btn animate-text">Save Lives <i class="fas fa-briefcase-medical"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <!-- Crisis Counter Section -->
+    <section class="crisis-counter">
+        <div class="container">
+            <div class="counter-box">
+                <div class="counter-item">
+                    <i class="fas fa-utensils"></i>
+                    <h3 class="counter" data-target="2300000">0</h3>
+                    <p>People Facing Starvation</p>
+                </div>
+                <div class="counter-item">
+                    <i class="fas fa-home"></i>
+                    <h3 class="counter" data-target="500000">0</h3>
+                    <p>Homes Destroyed</p>
+                </div>
+                <div class="counter-item">
+                    <i class="fas fa-hospital-user"></i>
+                    <h3 class="counter" data-target="40000">0</h3>
+                    <p>Injured Civilians</p>
+                </div>
+                <div class="counter-item">
+                    <i class="fas fa-child"></i>
+                    <h3 class="counter" data-target="2500">0</h3>
+                    <p>Children Killed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About <span>Ash Shabab Ruh Ul Ummah</span></h2>
+                <div class="title-border"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text animate-left">
+                    <h3>Our Mission</h3>
+                    <p>Ash Shabab Ruh Ul Ummah is dedicated to the upliftment and protection of the Ummah worldwide. In these critical times, we focus our efforts on the humanitarian crisis in Palestine, where our brothers and sisters face unimaginable hardships.</p>
+                    <p>We believe in practical solutions combined with spiritual support to help those in need, following the principles of compassion and justice in Islam.</p>
+                    <a href="#" class="btn">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="about-image animate-right">
+                    <img src="images/about-image.jpg" alt="Our Team in Action">
+                    <div class="image-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Palestine Crisis Section -->
+    <section class="palestine-crisis" id="palestine">
+        <div class="container">
+            <div class="section-title">
+                <h2>Palestine <span>Humanitarian Crisis</span></h2>
+                <div class="title-border"></div>
+            </div>
+            <div class="crisis-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2023 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Starvation as a Weapon</h3>
+                        <p>Over 2.3 million Palestinians in Gaza are facing severe food insecurity, with 90% regularly skipping meals. Children are suffering from acute malnutrition at alarming rates.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Ongoing</div>
+                    <div class="timeline-content">
+                        <h3>Medical Catastrophe</h3>
+                        <p>Hospitals are overwhelmed with limited supplies. Over 40,000 injured civilians lack proper medical care due to blockade restrictions on medical supplies.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Daily Reality</div>
+                    <div class="timeline-content">
+                        <h3>Psychological Trauma</h3>
+                        <p>An entire generation of Palestinian children is growing up with severe PTSD from constant bombardment, loss of family members, and daily survival struggles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section class="donate" id="donate">
+        <div class="container">
+            <div class="section-title">
+                <h2>Help <span>Palestine Now</span></h2>
+                <div class="title-border"></div>
+            </div>
+            <div class="donation-cards">
+                <div class="donation-card">
+                    <div class="card-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Food Package</h3>
+                    <p>Provide a family with essential food supplies for one month</p>
+                    <div class="amount">$50</div>
+                    <a href="#" class="btn">Donate Now</a>
+                </div>
+                <div class="donation-card">
+                    <div class="card-icon">
+                        <i class="fas fa-briefcase-medical"></i>
+                    </div>
+                    <h3>Medical Kit</h3>
+                    <p>Supply a basic medical kit to treat wounded civilians</p>
+                    <div class="amount">$100</div>
+                    <a href="#" class="btn">Donate Now</a>
+                </div>
+                <div class="donation-card">
+                    <div class="card-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Shelter Support</h3>
+                    <p>Help rebuild a home destroyed in bombardments</p>
+                    <div class="amount">$500</div>
+                    <a href="#" class="btn">Donate Now</a>
+                </div>
+                <div class="donation-card">
+                    <div class="card-icon">
+                        <i class="fas fa-hand-holding-water"></i>
+                    </div>
+                    <h3>Water Purification</h3>
+                    <p>Provide clean water for a family for one month</p>
+                    <div class="amount">$30</div>
+                    <a href="#" class="btn">Donate Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="news" id="news">
+        <div class="container">
+            <div class="section-title">
+                <h2>Latest <span>Updates</span></h2>
+                <div class="title-border"></div>
+            </div>
+            <div class="news-carousel">
+                <div class="swiper news-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="news-card">
+                                <div class="news-image">
+                                    <img src="images/news1.jpg" alt="News Image">
+                                    <div class="news-date">15 Oct 2023</div>
+                                </div>
+                                <div class="news-content">
+                                    <h3>UN Warns of Famine in Gaza</h3>
+                                    <p>The United Nations has issued a stark warning that Gaza faces imminent famine without immediate humanitarian access...</p>
+                                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="news-card">
+                                <div class="news-image">
+                                    <img src="images/news2.jpg" alt="News Image">
+                                    <div class="news-date">10 Oct 2023</div>
+                                </div>
+                                <div class="news-content">
+                                    <h3>Our Team Reaches Gaza</h3>
+                                    <p>After months of negotiations, our humanitarian team has finally gained access to deliver food and medical supplies to northern Gaza...</p>
+                                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="news-card">
+                                <div class="news-image">
+                                    <img src="images/news3.jpg" alt="News Image">
+                                    <div class="news-date">5 Oct 2023</div>
+                                </div>
+                                <div class="news-content">
+                                    <h3>Children Dying from Malnutrition</h3>
+                                    <p>Reports from Gaza hospitals indicate a sharp rise in child deaths due to severe malnutrition and lack of medical supplies...</p>
+                                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Alert -->
+    <section class="emergency-alert">
+        <div class="container">
+            <div class="alert-box">
+                <div class="alert-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <div class="alert-content">
+                    <h3>EMERGENCY APPEAL: GAZA STARVATION CRISIS</h3>
+                    <p>Thousands of children are going to bed hungry every night. Your donation can save lives today.</p>
+                </div>
+                <div class="alert-button">
+                    <a href="#donate" class="btn btn-emergency">Donate Now <i class="fas fa-hand-holding-heart"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact <span>Us</span></h2>
+                <div class="title-border"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Our Location</h3>
+                        <p>123 Ummah Street, Global City, Earth</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email Us</h3>
+                        <p>contact@ashshababruhulummah.org</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3>Call Us</h3>
+                        <p>+1 (234) 567-8900</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-share-alt"></i>
+                        <h3>Follow Us</h3>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="logo">
+                        <img src="images/logo-white.png" alt="Ash Shabab Ruh Ul Ummah">
+                        <h1>Ash Shabab <span>Ruh Ul Ummah</span></h1>
+                    </div>
+                    <p>Working for the betterment of the Ummah through humanitarian aid, education, and spiritual development.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#palestine">Palestine Crisis</a></li>
+                        <li><a href="#donate">Donate</a></li>
+                        <li><a href="#news">News</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <p>Stay updated with our latest activities and campaigns.</p>
+                    <form action="#" method="POST">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2023 Ash Shabab Ruh Ul Ummah. All Rights Reserved.</p>
+                <div class="footer-menu">
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    // Preloader
+    const loader = document.querySelector('.loader');
+    window.addEventListener('load', function() {
+        loader.classList.add('hidden');
+    });
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navbar = document.querySelector('.navbar');
+    
+    mobileMenuBtn.addEventListener('click', function() {
+        navbar.classList.toggle('active');
+        this.querySelector('i').classList.toggle('fa-times');
+    });
+
+    // Close mobile menu when clicking on a link
+    const navLinks = document.querySelectorAll('.navbar ul li a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            navbar.classList.remove('active');
+            mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+        });
+    });
+
+    // Header scroll effect
+    const header = document.querySelector('.header');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+
+    // Back to top button
+    const backToTopBtn = document.querySelector('.back-to-top');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('active');
+        } else {
+            backToTopBtn.classList.remove('active');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // Hero Carousel
+    const heroSwiper = new Swiper('.hero-swiper', {
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+        on: {
+            init: function() {
+                animateHeroText();
+            },
+            slideChangeTransitionStart: function() {
+                document.querySelectorAll('.hero-content .animate-text').forEach(text => {
+                    text.classList.remove('animated');
+                });
+            },
+            slideChangeTransitionEnd: function() {
+                animateHeroText();
+            }
+        }
+    });
+
+    function animateHeroText() {
+        const animateTexts = document.querySelectorAll('.hero-content .animate-text');
+        animateTexts.forEach((text, index) => {
+            setTimeout(() => {
+                text.classList.add('animated');
+            }, index * 200);
+        });
+    }
+
+    // News Carousel
+    const newsSwiper = new Swiper('.news-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+            },
+            992: {
+                slidesPerView: 3,
+            }
+        }
+    });
+
+    // Counter Animation
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200;
+
+    function animateCounters() {
+        counters.forEach(counter => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            const increment = target / speed;
+
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(animateCounters, 1);
+            } else {
+                counter.innerText = target.toLocaleString();
+            }
+        });
+    }
+
+    // Intersection Observer for Animations
+    const observerOptions = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                if (entry.target.classList.contains('crisis-counter')) {
+                    animateCounters();
+                }
+                
+                entry.target.querySelectorAll('.animate-text, .animate-left, .animate-right').forEach(el => {
+                    el.classList.add('animated');
+                });
+                
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observe sections
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
+  </script>
 </body>
 </html>
